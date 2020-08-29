@@ -15,10 +15,10 @@ document.querySelector(".img1 ").setAttribute("src", `./images/dice${randNumberO
 document.querySelector(".img2 ").setAttribute("src", `./images/dice${randNumberTwo}.png`);
 // Create an if else statement to determine the outcome eachtime the dice is rolled
 if(randNumberOne > randNumberTwo) {
-   p1 =  document.querySelector("h1 ").textContent = "PLay 1 wins";
+   p1 =  document.querySelector("h1 ").textContent = "PLayer 1 wins";
    playerScoreResult.push(p1)
 } else if (randNumberOne < randNumberTwo) {
-   var p2 = document.querySelector("h1 ").textContent = "PLay 2 wins";
+   var p2 = document.querySelector("h1 ").textContent = "PLayer 2 wins";
     playerScoreResult.push(p2)
 // If the outcone of the dice roll is equal then set textContent to a draw between the two players
 } else {
@@ -33,10 +33,10 @@ const count = playerScoreResult =>
   }), {}) // don't forget to initialize the accumulator
 
 const duplicates = dict =>
-  Object.keys(dict).filter((a) => dict[a] > 1)
+Object.keys(dict).filter((a) => dict[a] > 1);
 
-console.log(count(playerScoreResult)) // { Mike: 1, Matt: 1, Nancy: 2, Adam: 1, Jenny: 1, Carl: 1 }
-console.log(duplicates(count(playerScoreResult))) // [ 'Nancy' ]
+// console.log(count(playerScoreResult)) // { Play 2 wins: 1,  }
+// console.log(duplicates(count(playerScoreResult))) // [ 'Nancy' ]
 var result = duplicates(count(playerScoreResult));
 document.querySelector("h1 ").textContent = result;
 
@@ -56,24 +56,21 @@ for(var i=0; i < playerScoreResult.length; i++) {
 // Roll is Disabled once a total of three roles have been used - user will have to restart the application - perhaps show a prompt to restart ?
     if(playerScoreResult.length >= 3){
        document.getElementById("bestOfThree").innerHTML = playerScoreResult[2];
-       document.querySelector("#bestOfThree").classList.remove("invisible")
+       document.querySelector("#bestOfThree").classList.remove("invisible");
        rollMax.disabled = true;
 };
 
-// Determine who is the winner
-if(playerScoreResult.includes)
-
 // console statment used for testing will remove once I publish this application onto the web.
-       console.log(playerScoreResult);   
+      //  console.log(playerScoreResult)
 }
 // Restart the dice roll to 6 for the players to restart the game with the dice rolls starting at 6
 function restartDiceRoll(){
 rollMax.disabled = false;
 document.querySelector(".img1 ").setAttribute("src", `./images/dice6.png`);
 document.querySelector(".img2 ").setAttribute("src", `./images/dice6.png`);
-document.getElementById("bestOfOne").innerHTML = "Score Results"
+document.getElementById("bestOfOne").innerHTML = "Score Results";
 document.querySelector("#bestOfTwo").classList.add("invisible");
-document.querySelector("#bestOfThree").classList.add("invisible")
+document.querySelector("#bestOfThree").classList.add("invisible");
 // Empties Array once the user wants to play a new game
 playerScoreResult.length = 0;
 };

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container">
+      <h2>Best of Three</h2>
+      <h1>Refresh Me</h1>
+
+      <div class="dice">
+        <p>Player 1</p>
+        <img class="img1" src="./images/dice6.png">
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img class="img2" src="./images/dice6.png">
+      </div>
+
+      <br><br><br>
+
+      <div>
+        <button id="tog" class="but" onclick="diceRoll()">Roll!</button>
+
+        <button  class="but" onclick="restartDiceRoll()">Restart</button>
+      </div>
+      <p id="bestOfOne">Score Results</p>
+      <p id="bestOfTwo">Score Results</p>
+      <p id="bestOfThree">Score Results</p>
+      
+    </div>
+
+    <script src="./dice.js"></script>
+  </body>
+  <footer>
+    joedevninja 🎲 CEO 🎲 Webdev
+  </footer>
+</html>
